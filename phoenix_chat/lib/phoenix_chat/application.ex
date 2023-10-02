@@ -14,8 +14,6 @@ defmodule PhoenixChat.Application do
       PhoenixChat.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: PhoenixChat.PubSub},
-      # Start Finch
-      {Finch, name: PhoenixChat.Finch},
       # Start the Endpoint (http/https)
       PhoenixChatWeb.Endpoint
       # Start a worker by calling: PhoenixChat.Worker.start_link(arg)

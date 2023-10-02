@@ -17,14 +17,8 @@ config :phoenix_chat, PhoenixChat.Repo,
 # you can enable the server option below.
 config :phoenix_chat, PhoenixChatWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "b6/f/PYYWeKboYKKEcdDMgQGJm5LSrMQvlZmN0gF9g8okP0/Ym0RZ8eFGBoyogau",
+  secret_key_base: "/NpCFOzDg85aho0Pju/jymAr7EydnK6PtV7uCY2hXbCwmWL3QfkT50XzIrvLrV41",
   server: false
-
-# In test we don't send emails.
-config :phoenix_chat, PhoenixChat.Mailer, adapter: Swoosh.Adapters.Test
-
-# Disable swoosh api client as it is only required for production adapters.
-config :swoosh, :api_client, false
 
 # Print only warnings and errors during test
 config :logger, level: :warning

@@ -7,7 +7,7 @@ defmodule PhoenixChatWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_phoenix_chat_key",
-    signing_salt: "iH8udSHP",
+    signing_salt: "9TAEo07J",
     same_site: "Lax"
   ]
 
@@ -31,10 +31,6 @@ defmodule PhoenixChatWeb.Endpoint do
     plug Phoenix.CodeReloader
     plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phoenix_chat
   end
-
-  plug Phoenix.LiveDashboard.RequestLogger,
-    param_key: "request_logger",
-    cookie_key: "request_logger"
 
   plug Plug.RequestId
   plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
