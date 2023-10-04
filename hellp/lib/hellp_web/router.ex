@@ -18,6 +18,7 @@ defmodule HellpWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/hello", HelloController, :home
   end
 
   # Other scopes may use custom stacks.
