@@ -4,4 +4,8 @@ defmodule HellpWeb.HelloController do
   def home(conn, _params) do
     render(conn, :home)
   end
+
+  def show(conn, %{"messenger" => messenger}) do
+    render(conn, :show, messenger: messenger)
+  end
 end

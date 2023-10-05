@@ -19,6 +19,7 @@ defmodule HellpWeb.Router do
 
     get "/", PageController, :home
     get "/hello", HelloController, :home
+    get "/hello/:messenger", HelloController, :show
   end
 
   # Other scopes may use custom stacks.
