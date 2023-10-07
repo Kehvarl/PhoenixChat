@@ -19,6 +19,9 @@ defmodule HellpWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    resources "/users", UserController
+    resources "/posts", PostsController, only: [:index, :show]
+    resources "/comments", CommentsController, except: [:delete]
     get "/hello", HelloController, :home
     get "/hello/:messenger", HelloController, :show
   end
