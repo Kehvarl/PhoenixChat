@@ -24,6 +24,24 @@ defmodule HellpWeb.Router do
     resources "/comments", CommentsController, except: [:delete]
     get "/hello", HelloController, :home
     get "/hello/:messenger", HelloController, :show
+
+    resources "/reviews", ReviewController
+  end
+
+  scope "/admin", HellpWeb.Admin do
+    pipe_through :browser
+
+    resources "/reviews", ReviewController
+  end
+
+  scope "/api", HelloWeb.Api, as: :api do
+    pipe_through :api
+
+    scope "/v1", V1, as: :v1 do
+      resources "/images",  ImageController
+      resources "/reviews", ReviewController
+      resources "/users",   UserController
+    end
   end
 
   # Other scopes may use custom stacks.
